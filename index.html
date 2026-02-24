@@ -3,201 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Design Learning Board</title>
+  <title>Shirley Web Design Learning</title>
   <style>
-    :root {
-      --bg:#f6f7fb;
-      --card:#ffffff;
-      --ink:#1f2937;
-      --muted:#6b7280;
-      --brand:#2563eb;
-      --border:#e5e7eb;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Inter, Arial, sans-serif;
-      color: var(--ink);
-      background: var(--bg);
-      line-height: 1.5;
-    }
-    .container { width: min(1100px, 92%); margin: 0 auto; }
-
-    /* 1) Header */
-    .site-header {
-      background:#fff;
-      border-bottom:1px solid var(--border);
-      position: sticky;
-      top: 0;
-    }
-    .header-inner {
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding: 14px 0;
-      gap: 16px;
-    }
-    .logo { font-weight: 800; color: var(--brand); }
-    .nav { display:flex; gap: 14px; flex-wrap: wrap; }
-    .nav a { text-decoration:none; color: var(--ink); font-weight:600; }
-
-    /* 2) Hero */
-    .hero {
-      margin: 22px 0;
-      padding: 24px;
-      background: linear-gradient(135deg, #dbeafe, #e0e7ff);
-      border:1px solid var(--border);
-      border-radius: 16px;
-    }
-    .hero h1 { margin: 0 0 8px; }
-    .hero p { margin: 0 0 14px; color: #374151; }
-    .btn {
-      display:inline-block;
-      background: var(--brand);
-      color:#fff;
-      text-decoration:none;
-      padding: 10px 14px;
-      border-radius: 10px;
-      font-weight: 700;
-    }
-
-    /* 3) Card grid */
-    .grid {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-      gap: 14px;
-      margin: 16px 0 22px;
-    }
-    .card {
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius: 14px;
-      padding: 14px;
-      box-shadow: 0 1px 2px rgba(0,0,0,.04);
-    }
-    .card h3 { margin: 0 0 8px; font-size: 1rem; }
-    .tag {
-      display:inline-block;
-      font-size: 12px;
-      background:#eef2ff;
-      color:#3730a3;
-      border-radius:999px;
-      padding:3px 8px;
-      margin-bottom:8px;
-    }
-
-    /* 4) Form section */
-    .form-box {
-      background:#fff;
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding: 16px;
-      margin-bottom: 22px;
-    }
-    .field { margin-bottom: 10px; }
-    label { display:block; font-weight:600; margin-bottom:4px; }
-    input, textarea {
-      width:100%;
-      border:1px solid #d1d5db;
-      border-radius:10px;
-      padding:10px;
-      font: inherit;
-    }
-
-    /* 5) Footer */
-    .site-footer {
-      background:#111827;
-      color:#f9fafb;
-      padding: 18px 0;
-      margin-top: 12px;
-    }
-    .muted { color: var(--muted); }
+    body{margin:0;font-family:Inter,Arial,sans-serif;background:#f6f7fb;color:#111827}
+    .wrap{width:min(900px,92%);margin:60px auto}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:24px}
+    h1{margin:0 0 8px}
+    p{color:#6b7280}
+    .links{display:grid;gap:12px;margin-top:18px}
+    a{display:block;text-decoration:none;padding:14px 16px;border-radius:12px;font-weight:700}
+    .a1{background:#eef2ff;color:#3730a3}
+    .a2{background:#ede9fe;color:#5b21b6}
   </style>
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo">Shirley Web Design Lab</div>
-      <nav class="nav" aria-label="Main Navigation">
-        <a href="#hero">Hero</a>
-        <a href="#components">Components</a>
-        <a href="#form">Form</a>
-        <a href="#footer">Footer</a>
-      </nav>
+  <div class="wrap">
+    <div class="card">
+      <h1>Shirley Web Design Learning</h1>
+      <p>No coding lessons here — just visual web design vocabulary and layout understanding.</p>
+      <div class="links">
+        <a class="a1" href="components.html">Open Component Library</a>
+        <a class="a2" href="anatomy.html">Open Real Page Anatomy</a>
+      </div>
     </div>
-  </header>
-
-  <main class="container">
-    <!-- HERO SECTION -->
-    <section id="hero" class="hero">
-      <h1>Basic Website Anatomy</h1>
-      <p>This page is a learning board. Every block has a common web design item name.</p>
-      <a class="btn" href="#components">Primary Button (CTA)</a>
-      <a class="btn" style="margin-left:8px;background:#111827" href="roadmap.html">Open 3-Day Roadmap</a>
-      <a class="btn" style="margin-left:8px;background:#059669" href="components.html">Open Component Library</a>
-      <a class="btn" style="margin-left:8px;background:#7c3aed" href="anatomy.html">Open Real Page Anatomy</a>
-    </section>
-
-    <!-- COMPONENTS / CONTENT CARDS -->
-    <section id="components">
-      <h2>Common Web Design Items</h2>
-      <p class="muted">Review these names while seeing live examples.</p>
-
-      <div class="grid">
-        <article class="card">
-          <span class="tag">Layout</span>
-          <h3>Container</h3>
-          <p>Wraps content and controls max width + alignment.</p>
-        </article>
-        <article class="card">
-          <span class="tag">Navigation</span>
-          <h3>Navbar / Menu</h3>
-          <p>Top links used for moving across sections/pages.</p>
-        </article>
-        <article class="card">
-          <span class="tag">Typography</span>
-          <h3>Heading + Body Text</h3>
-          <p>Title hierarchy (H1/H2/H3) and paragraph readability.</p>
-        </article>
-        <article class="card">
-          <span class="tag">UI Element</span>
-          <h3>Button (CTA)</h3>
-          <p>Main action users should click, like “Book Now”.</p>
-        </article>
-        <article class="card">
-          <span class="tag">Media</span>
-          <h3>Image / Gallery Item</h3>
-          <p>Visual block for products, dishes, or brand photos.</p>
-        </article>
-        <article class="card">
-          <span class="tag">Spacing</span>
-          <h3>Margin / Padding</h3>
-          <p>Space outside and inside boxes to improve layout.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- FORM -->
-    <section id="form" class="form-box">
-      <h2>Contact Form Example</h2>
-      <div class="field">
-        <label for="name">Input Field: Name</label>
-        <input id="name" type="text" placeholder="Type your name" />
-      </div>
-      <div class="field">
-        <label for="message">Textarea Field: Message</label>
-        <textarea id="message" rows="4" placeholder="Write a message"></textarea>
-      </div>
-      <button class="btn" type="button">Submit Button</button>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer id="footer" class="site-footer">
-    <div class="container">
-      <strong>Footer</strong> — copyright, contact links, social links
-    </div>
-  </footer>
+  </div>
 </body>
 </html>
