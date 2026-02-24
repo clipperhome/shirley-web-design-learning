@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Website Anatomy (Highlighted Sections)</title>
+  <style>
+    :root{--ink:#111827;--muted:#6b7280;--bg:#f4f6fb;--line:#e5e7eb;--hl:#fef3c7;--hl2:#dbeafe;--hl3:#dcfce7}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    .wrap{width:min(1100px,92%);margin:18px auto}
+    .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    .btn{background:#2563eb;color:#fff;padding:8px 12px;border-radius:10px;text-decoration:none}
+    .note{font-size:14px;color:var(--muted);margin-bottom:14px}
+
+    .page{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+    .tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 8px;border-radius:999px;background:#111827;color:#fff;margin-bottom:8px}
+
+    .section{position:relative;padding:18px 20px;border-bottom:1px solid var(--line)}
+    .section:last-child{border-bottom:0}
+    .label{position:absolute;right:12px;top:10px;font-size:12px;font-weight:700;color:#111827;background:#fff;border:1px solid #d1d5db;border-radius:999px;padding:4px 8px}
+
+    .header{background:var(--hl2)}
+    .hero{background:var(--hl)}
+    .features{background:#fff}
+    .cta{background:var(--hl3)}
+    .footer{background:#111827;color:#fff}
+
+    .nav{display:flex;gap:12px;flex-wrap:wrap;font-weight:600}
+    .hero h1{margin:0 0 6px}
+    .hero p{margin:0 0 10px;color:#374151}
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    .card{border:1px solid var(--line);border-radius:10px;padding:10px;background:#fafafa}
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{background:#eef2ff;color:#3730a3;border-radius:999px;padding:4px 8px;font-size:12px}
+
+    .callout{margin-top:8px;padding:10px;border-left:4px solid #f59e0b;background:#fff7ed;font-size:14px}
+
+    @media (max-width:800px){.cards{grid-template-columns:1fr}.label{position:static;display:inline-block;margin-top:8px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <h1>Real Page Anatomy (Designer View)</h1>
+      <a class="btn" href="index.html">Back Home</a>
+    </div>
+    <p class="note">You’re 100% right: big components should be learned on a full page, not as small cards. This page highlights real sections and explains their job.</p>
+
+    <div class="page">
+      <section class="section header">
+        <span class="tag">GLOBAL SECTION</span>
+        <div class="label">HEADER</div>
+        <strong>Brand Logo</strong>
+        <nav class="nav" aria-label="Main navigation">
+          <span>Home</span><span>Menu</span><span>Gallery</span><span>About</span><span>Contact</span>
+        </nav>
+        <div class="callout"><strong>Header function:</strong> Persistent top area for brand + primary navigation + main CTA.</div>
+      </section>
+
+      <section class="section hero">
+        <span class="tag">ABOVE THE FOLD</span>
+        <div class="label">HERO</div>
+        <h1>Big Promise / Main Message</h1>
+        <p>One clear line explaining what this website is about, with one primary action.</p>
+        <div class="chips"><span class="chip">Primary CTA</span><span class="chip">Secondary CTA</span><span class="chip">Hero image</span></div>
+        <div class="callout"><strong>Hero function:</strong> First impression and strongest conversion section.</div>
+      </section>
+
+      <section class="section features">
+        <span class="tag">CONTENT SECTION</span>
+        <div class="label">FEATURES</div>
+        <div class="cards">
+          <article class="card"><strong>Feature Card 1</strong><p>Benefit summary</p></article>
+          <article class="card"><strong>Feature Card 2</strong><p>Benefit summary</p></article>
+          <article class="card"><strong>Feature Card 3</strong><p>Benefit summary</p></article>
+        </div>
+        <div class="callout"><strong>Feature section function:</strong> Explain value in scannable blocks.</div>
+      </section>
+
+      <section class="section cta">
+        <span class="tag">CONVERSION SECTION</span>
+        <div class="label">CTA BAND</div>
+        <h3 style="margin:0 0 6px">Ready to book?</h3>
+        <p style="margin:0 0 8px">Simple conversion prompt section near middle/bottom.</p>
+        <span class="chip">Book Now Button</span>
+        <div class="callout"><strong>CTA section function:</strong> Pull users toward one action before they leave.</div>
+      </section>
+
+      <section class="section footer">
+        <span class="tag" style="background:#fff;color:#111827">GLOBAL SECTION</span>
+        <div class="label">FOOTER</div>
+        <p style="margin:0 0 8px">Links · Contact · Social · Copyright</p>
+        <small style="opacity:.85">© 2026 Example Brand</small>
+        <div class="callout" style="background:#1f2937;color:#fff;border-left-color:#60a5fa"><strong>Footer function:</strong> Utility area for secondary info and trust/legal content.</div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
