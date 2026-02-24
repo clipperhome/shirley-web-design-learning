@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Component Library (Designer View)</title>
+  <style>
+    :root{--bg:#f6f7fb;--card:#fff;--ink:#111827;--muted:#6b7280;--line:#e5e7eb;--brand:#2563eb}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    .wrap{width:min(1100px,92%);margin:0 auto;padding:20px 0 60px}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    .btn{background:var(--brand);color:#fff;padding:8px 12px;border-radius:10px;text-decoration:none;border:0}
+    .section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:14px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+    .item{border:1px solid var(--line);border-radius:12px;padding:10px;background:#fff}
+    .name{font-weight:700}.desc{font-size:14px;color:var(--muted);margin:4px 0 8px}
+    .demo{font-size:14px}
+    .pill{display:inline-block;background:#eef2ff;color:#3730a3;border-radius:999px;padding:2px 8px;font-size:12px}
+    .tabs span{padding:6px 10px;border:1px solid var(--line);border-radius:8px;margin-right:6px;display:inline-block}
+    .accordion details{border:1px solid var(--line);border-radius:8px;padding:6px 10px;margin-bottom:6px}
+    table{width:100%;border-collapse:collapse} td,th{border:1px solid var(--line);padding:6px}
+    .footer{margin-top:20px;color:var(--muted);font-size:14px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <h1>Web Components (Artist/Designer View)</h1>
+      <a class="btn" href="index.html">Back Home</a>
+    </div>
+    <p>Each item shows: <strong>name</strong> + <strong>what it does</strong> + a tiny visual example.</p>
+
+    <section class="section"><h2>1) Page Sections</h2><div class="grid">
+      <div class="item"><div class="name">Header</div><div class="desc">Top bar with logo/navigation.</div><div class="demo">Logo | Menu | CTA</div></div>
+      <div class="item"><div class="name">Hero</div><div class="desc">First high-impact section.</div><div class="demo"><strong>Big headline</strong><br/>Subtext + button</div></div>
+      <div class="item"><div class="name">Feature Section</div><div class="desc">Highlights key benefits.</div><div class="demo">3 columns of features</div></div>
+      <div class="item"><div class="name">Gallery</div><div class="desc">Grid of images.</div><div class="demo">[img] [img] [img]</div></div>
+      <div class="item"><div class="name">FAQ Accordion</div><div class="desc">Expandable Q&A list.</div><div class="demo accordion"><details><summary>Question</summary>Answer</details></div></div>
+      <div class="item"><div class="name">Footer</div><div class="desc">Bottom area for legal/contact/social.</div><div class="demo">© Brand · Links · Social</div></div>
+    </div></section>
+
+    <section class="section"><h2>2) Navigation</h2><div class="grid">
+      <div class="item"><div class="name">Navbar</div><div class="desc">Main site navigation.</div><div class="demo">Home · About · Contact</div></div>
+      <div class="item"><div class="name">Dropdown Menu</div><div class="desc">Menu reveals more options.</div><div class="demo">Products ▼</div></div>
+      <div class="item"><div class="name">Hamburger Menu</div><div class="desc">Mobile menu icon.</div><div class="demo">☰</div></div>
+      <div class="item"><div class="name">Breadcrumb</div><div class="desc">Shows page path hierarchy.</div><div class="demo">Home › Services › Web Design</div></div>
+      <div class="item"><div class="name">Tabs</div><div class="desc">Switch between panels.</div><div class="demo tabs"><span>Overview</span><span>Pricing</span><span>FAQ</span></div></div>
+    </div></section>
+
+    <section class="section"><h2>3) Actions</h2><div class="grid">
+      <div class="item"><div class="name">Primary Button</div><div class="desc">Main action.</div><div class="demo"><button>Book Now</button></div></div>
+      <div class="item"><div class="name">Secondary Button</div><div class="desc">Less important action.</div><div class="demo"><button>Learn More</button></div></div>
+      <div class="item"><div class="name">Icon Button</div><div class="desc">Action with icon.</div><div class="demo">🔍 Search</div></div>
+      <div class="item"><div class="name">FAB</div><div class="desc">Floating quick action button.</div><div class="demo"><span class="pill">＋</span></div></div>
+      <div class="item"><div class="name">Link</div><div class="desc">Text navigation/action.</div><div class="demo"><a href="#">Read details</a></div></div>
+    </div></section>
+
+    <section class="section"><h2>4) Forms / Input</h2><div class="grid">
+      <div class="item"><div class="name">Text Field</div><div class="desc">Single-line input.</div><div class="demo"><input placeholder="Name"></div></div>
+      <div class="item"><div class="name">Textarea</div><div class="desc">Multi-line input.</div><div class="demo"><textarea rows="2" placeholder="Message"></textarea></div></div>
+      <div class="item"><div class="name">Dropdown (Select)</div><div class="desc">Choose one option list.</div><div class="demo"><select><option>Option A</option></select></div></div>
+      <div class="item"><div class="name">Checkbox</div><div class="desc">Multi-select true/false.</div><div class="demo"><label><input type="checkbox"> Email updates</label></div></div>
+      <div class="item"><div class="name">Radio Button</div><div class="desc">Single choice in group.</div><div class="demo"><label><input type="radio" name="r"> Basic</label> <label><input type="radio" name="r"> Pro</label></div></div>
+      <div class="item"><div class="name">Toggle / Switch</div><div class="desc">On/off state.</div><div class="demo"><label><input type="checkbox"> Dark Mode</label></div></div>
+      <div class="item"><div class="name">Slider</div><div class="desc">Range selector.</div><div class="demo"><input type="range"></div></div>
+      <div class="item"><div class="name">Date Picker</div><div class="desc">Choose date.</div><div class="demo"><input type="date"></div></div>
+      <div class="item"><div class="name">Search Bar</div><div class="desc">Find content quickly.</div><div class="demo"><input placeholder="Search..."></div></div>
+      <div class="item"><div class="name">File Upload</div><div class="desc">Attach file/image.</div><div class="demo"><input type="file"></div></div>
+    </div></section>
+
+    <section class="section"><h2>5) Info / Display</h2><div class="grid">
+      <div class="item"><div class="name">Card</div><div class="desc">Container for grouped content.</div><div class="demo">Image + title + text + button</div></div>
+      <div class="item"><div class="name">Badge / Tag / Chip</div><div class="desc">Small label.</div><div class="demo"><span class="pill">New</span></div></div>
+      <div class="item"><div class="name">Tooltip</div><div class="desc">Hint text on hover.</div><div class="demo">ⓘ "Helpful tip"</div></div>
+      <div class="item"><div class="name">Modal / Dialog</div><div class="desc">Popup overlay.</div><div class="demo">[Centered popup window]</div></div>
+      <div class="item"><div class="name">Drawer / Side Panel</div><div class="desc">Panel slides from side.</div><div class="demo">☰ opens side menu</div></div>
+      <div class="item"><div class="name">Carousel</div><div class="desc">Slides through images.</div><div class="demo">◀ image 1/5 ▶</div></div>
+      <div class="item"><div class="name">Table</div><div class="desc">Rows/columns for data.</div><div class="demo"><table><tr><th>Item</th><th>Price</th></tr><tr><td>Tea</td><td>$6</td></tr></table></div></div>
+      <div class="item"><div class="name">Pagination</div><div class="desc">Move between pages.</div><div class="demo">« 1 2 3 »</div></div>
+    </div></section>
+
+    <section class="section"><h2>6) Feedback / Status</h2><div class="grid">
+      <div class="item"><div class="name">Toast</div><div class="desc">Temporary success/info message.</div><div class="demo">✅ Saved successfully</div></div>
+      <div class="item"><div class="name">Alert Banner</div><div class="desc">Important warning/info area.</div><div class="demo">⚠ Maintenance tonight</div></div>
+      <div class="item"><div class="name">Progress Bar</div><div class="desc">Shows progress/loading.</div><div class="demo"><progress value="60" max="100"></progress></div></div>
+      <div class="item"><div class="name">Skeleton Loader</div><div class="desc">Placeholder while content loads.</div><div class="demo">▭▭▭ (gray loading blocks)</div></div>
+      <div class="item"><div class="name">Empty State</div><div class="desc">No content yet.</div><div class="demo">No orders yet</div></div>
+      <div class="item"><div class="name">Error State</div><div class="desc">When something fails.</div><div class="demo">❌ Failed to load data</div></div>
+    </div></section>
+
+    <p class="footer">Tip: describe your desired page using these names in sequence, and I can design it for you quickly.</p>
+  </div>
+</body>
+</html>
